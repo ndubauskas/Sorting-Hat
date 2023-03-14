@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01505A1329C108D1002B3981 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01505A1229C108D1002B3981 /* Question.swift */; };
 		0160E39C29C0FEE9009D434E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E39B29C0FEE9009D434E /* AppDelegate.swift */; };
 		0160E39E29C0FEE9009D434E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E39D29C0FEE9009D434E /* SceneDelegate.swift */; };
 		0160E3A029C0FEE9009D434E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E39F29C0FEE9009D434E /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01505A1229C108D1002B3981 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0160E39829C0FEE9009D434E /* Sorting Hat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorting Hat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0160E39B29C0FEE9009D434E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0160E39D29C0FEE9009D434E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				0160E3A429C0FEEB009D434E /* Assets.xcassets */,
 				0160E3A629C0FEEB009D434E /* LaunchScreen.storyboard */,
 				0160E3A929C0FEEB009D434E /* Info.plist */,
+				01505A1229C108D1002B3981 /* Question.swift */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0160E3A029C0FEE9009D434E /* ViewController.swift in Sources */,
+				01505A1329C108D1002B3981 /* Question.swift in Sources */,
 				0160E39C29C0FEE9009D434E /* AppDelegate.swift in Sources */,
 				0160E39E29C0FEE9009D434E /* SceneDelegate.swift in Sources */,
 			);

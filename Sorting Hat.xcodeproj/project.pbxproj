@@ -17,6 +17,7 @@
 		0160E3B329C0FEEB009D434E /* Sorting_HatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E3B229C0FEEB009D434E /* Sorting_HatTests.swift */; };
 		0160E3BD29C0FEEB009D434E /* Sorting_HatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E3BC29C0FEEB009D434E /* Sorting_HatUITests.swift */; };
 		0160E3BF29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E3BE29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift */; };
+		01BEC07329C2741A001273FC /* Point Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEC07229C2741A001273FC /* Point Calc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0160E3B829C0FEEB009D434E /* Sorting HatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorting HatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0160E3BC29C0FEEB009D434E /* Sorting_HatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_HatUITests.swift; sourceTree = "<group>"; };
 		0160E3BE29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_HatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01BEC07229C2741A001273FC /* Point Calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Point Calc.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				0160E3A629C0FEEB009D434E /* LaunchScreen.storyboard */,
 				0160E3A929C0FEEB009D434E /* Info.plist */,
 				01505A1229C108D1002B3981 /* Question.swift */,
+				01BEC07229C2741A001273FC /* Point Calc.swift */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				01505A1329C108D1002B3981 /* Question.swift in Sources */,
 				0160E39C29C0FEE9009D434E /* AppDelegate.swift in Sources */,
 				0160E39E29C0FEE9009D434E /* SceneDelegate.swift in Sources */,
+				01BEC07329C2741A001273FC /* Point Calc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

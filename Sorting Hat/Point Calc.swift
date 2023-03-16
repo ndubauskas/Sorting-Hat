@@ -7,25 +7,22 @@
 
 import Foundation
 //Total points for each house
-var gPoints = 0
-var rPoints = 0
-var hPoints = 0
-var sPoints = 0
+var pointReturn = [0,0,0,0]
 
-/*
+func calcPoints(userAnswer: String) -> [Int]
+{
+    
+    if userAnswer.contains("Dawn")
+    {
+        pointReturn = [73,73,30,26]
+       
+     
+    }
+    else if userAnswer.contains("Dusk")
+    {
+        pointReturn = [27,27,70,74]
+       
+    }
+    return pointReturn
+}
 
-if answer2C.contains("Dawn")
-{
-   var gPoint = 73
-   var rPoint = 73
-   var hPoint = 30
-   var sPoint = 26
-}
-if answer2C.contains("Dusk")
-{
-var gPoint = 27
-var rPoint = 27
-var hPoint = 70
-var sPoint = 74
-}
-*/

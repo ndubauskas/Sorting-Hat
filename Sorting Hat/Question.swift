@@ -6,36 +6,22 @@
 //
 
 import Foundation
-/*
-class Question{
-    var questionNum = 0
-    var gPoint = 0
-    var sPoint = 0
-    var hPoint = 0
-    var rPoint = 0
-    var questionPrompt = ""
-   
-    
-    init(questionNum: Int = 0, gPoint: Int = 0, sPoint: Int = 0, hPoint: Int = 0, rPoint: Int = 0, questionPrompt: String = "") {
-        self.questionNum = questionNum
-        self.gPoint = gPoint
-        self.sPoint = sPoint
-        self.hPoint = hPoint
-        self.rPoint = rPoint
-        self.questionPrompt = questionPrompt
-        
-    }
-    
-}
- */
 
-var questionNum = 0
 
+var questionNum2C = 0
+var questionNum4C = 0
+var answerNum2C = 0
+var answerNum4C = 0
+var questionLabelNum = 1
 //Two choice answers
-var question2C = ["Dawn or Dusk?","Forest or River?", "Moon or Starts?"]
-var answer2C = ["Dawn", "Dusk","Forest", "Moon", "Stars"]
+let questionBank = ["Dawn or Dusk?","Forest or River?", "Moon or Stars?","Black or White?", "Heads or Tails?", "Left or Right?"," Four boxes are placed before you. Which would you try and open?",
+    "You and two friends need to cross a bridge guarded by a river troll who insists on fighting one of you before he will let all of you pass. Do you:"
 
+]
+let answer2C = ["Dawn", "Dusk","Forest", "River", "Moon", "Stars", "Black", "White", "Heads", "Tails","Left", "Right"]
 
+let answer4C = ["The small tortoiseshell box, embellished with gold.","The gleaming jet black box with a silver lock and key.","The ornate golden casket, standing on clawed feet."," The small pewter box, unassuming and plain",
+"Attempt to confuse the troll into letting all three of you pass without fighting?"," Suggest drawing lots to decide which of you will fight?","Suggest that all three of you should fight (without telling the troll)?"," Volunteer to fight?"]
 //Four choice answers
 
 
@@ -45,23 +31,8 @@ var answer2C = ["Dawn", "Dusk","Forest", "Moon", "Stars"]
  
  Array question sets
  
-Question 1
+ Q1
  Dawn or dusk?
- var answer2C = Dawn
- if (answer2c.containts == "Dawn")
- {
-    var gPoint = 73
-    var rPoint = 73
-    var hPoint = 30
-    var sPoint = 26
- }
- if (answer2C.contains == "Dusk)
- {
- var gPoint = 27
- var rPoint = 27
- var hPoint = 70
- var sPoint = 74
- }
  
  Q2
  Forest or river?
@@ -103,7 +74,7 @@ Q4
  Home
  
  Q10
- One of your house mates has cheated in a Hogwarts exam by using a Self-Spelling Quill. Now he has come top of the class in Charms, beating you into second place. Professor Flitwick is suspicious of what happened. He draws you to one side after his lesson and asks you whether or not your classmate used a forbidden quill. What do you do?
+ One of your house mates has cheated in a Hogwarts exam by using a Self-Spelling Quill. Professor Flitwick is suspicious of what happened. He draws you to one side after his lesson and asks you whether or not your classmate used a forbidden quill. What do you do?
 
  Lie and say you don’t know
  Tell Professor Flitwick that he ought to ask your classmate
@@ -153,11 +124,11 @@ Q4
  
  Q17
  After you have died, what would you most like people to do when they hear your name?
+ 
  Miss you, but smile
  Ask for more stories about your adventures
  Think with admiration of your achievements
- I don't care what people think of me after I'm dead; it's what they think of me while I'm alive that counts
- 
+ I don't care what people think of me after I'm dead.
  Q18
  How would you like to be known to history?
 
@@ -168,6 +139,7 @@ The Great
  
  Q19
  A Muggle confronts you and says that they are sure you are a witch or wizard. Do you:
+ 
  Ask what makes them think so?
  Agree, and ask whether they’d like a free sample of a jinx?
  Agree, and walk away, leaving them to wonder whether you are bluffing?

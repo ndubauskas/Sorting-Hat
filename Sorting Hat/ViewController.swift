@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         updateQuestion()
         print("Choice 1 selected")
         print("Griff points is:",userPoints[0])
+        print("Rav points is:",userPoints[3])
+        
         
     }
     
@@ -52,6 +54,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice3Outlet: UIButton!
     
     @IBAction func choice3Btn(_ sender: UIButton) {
+        print("Griff points is:",userPoints[0])
         updateQuestion()
 
     }

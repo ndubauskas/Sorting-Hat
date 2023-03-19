@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         updateAnswers()
        
         
-        pointPrintTest()
+        //pointPrintTest()
     }
     
     @IBOutlet weak var choice2Outlet: UIButton!
@@ -52,10 +52,9 @@ class ViewController: UIViewController {
         userAnswer = String(choiceTitle)
         userPoints = calcPoints(userAnswer: userAnswer)
         updateQuestion()
+        updateAnswers()
       
-
-       
-        pointPrintTest()
+        //pointPrintTest()
 
     }
     
@@ -69,7 +68,7 @@ class ViewController: UIViewController {
         updateAnswers()
         
         
-        pointPrintTest()
+        //pointPrintTest()
         
     }
     
@@ -82,18 +81,30 @@ class ViewController: UIViewController {
         updateQuestion()
         updateAnswers()
 
-        pointPrintTest()
+        //pointPrintTest()
     }
     
   
     func updateQuestion()
     {
-        questionNum2C += 1
-        questionLabelNum += 1
-       displayQuestion.text = questionBank[questionNum2C]
         
-        questionNumberOutlet.text = String(questionLabelNum)
-        
+        if(questionNum2C != 6)
+        {
+            questionNum2C += 1
+            questionLabelNum += 1
+            
+            displayQuestion.text = questionBank[questionLabelNum - 1]
+            questionNumberOutlet.text = String(questionLabelNum)
+        }
+        else
+        {
+            questionNum4C += 1
+            questionLabelNum += 1
+            
+            displayQuestion.text = questionBank[questionLabelNum - 1]
+            questionNumberOutlet.text = String(questionLabelNum)
+        }
+            
        // print("Question Number updated to:", questionNum)
         
     }
@@ -104,20 +115,26 @@ class ViewController: UIViewController {
         
         if(questionNum2C != 6){
             answerNum2C += 2
+            
             choice1Outlet.setTitle(answer2C[answerNum2C], for: .normal)
             choice2Outlet.setTitle(answer2C[answerNum2C + 1], for: .normal)
-            
+               // print("inside 2c!!!")
+            //print("Question Num 2C is = ",questionNum2C)
         }
         
         else
         {
             // do 4 choice answers
-            answerNum4C += 4
+            //print("Question = ",questionNum2C)
+            //print("Inside the else!!!")
+            //print(answer4C[answerNum4C])
+            //print(answer4C[answerNum4C+1])
             choice1Outlet.setTitle(answer4C[answerNum4C], for: .normal)
             choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
             choice3Outlet.setTitle(answer4C[answerNum4C + 2], for: .normal)
             choice4Outlet.setTitle(answer4C[answerNum4C + 3], for: .normal)
             
+            answerNum4C += 4
         }
         
     }
@@ -125,22 +142,23 @@ class ViewController: UIViewController {
     
     @IBAction func resetButton(_ sender: Any) {
         
-        print("userpoints grff before reset",userPoints[0])
+        //print("userpoints grff before reset",userPoints[0])
         answerNum2C = 0
         answerNum4C = 0
         questionNum2C = 0
+        /*
         userPoints[0] = 0
         userPoints[1] = 0
         userPoints[2] = 0
         userPoints[3] = 0
+         */
+        userPoints = resetPoints()
         questionLabelNum = 1
         questionNumberOutlet.text = "1"
         displayQuestion.text = questionBank[0]
         choice1Outlet.setTitle(answer2C[0], for: .normal)
         choice2Outlet.setTitle(answer2C[1], for: .normal)
         
-
-        print("points griff after reset",userPoints[0])
         
     }
  

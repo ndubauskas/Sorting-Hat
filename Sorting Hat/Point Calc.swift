@@ -8,7 +8,12 @@
 import Foundation
 //Total points for each house
 var pointReturn = [0,0,0,0]
+let pointReset = [0,0,0,0]
 
+func resetPoints() -> [Int]
+{
+    return pointReset
+}
 func calcPoints(userAnswer: String) -> [Int]
 {
     
@@ -98,24 +103,74 @@ func calcPoints(userAnswer: String) -> [Int]
     }
     else if userAnswer.contains("small tortoiseshell box")
     {
-        print("tort!!")
+        
+        pointReturn[0] += 14
+        pointReturn[1] += 18
+        pointReturn[2] += 46
+        pointReturn[3] += 18
         
     }
     
     else if userAnswer.contains("gleaming jet black box")
     {
-        print("black!!")
+     
+        pointReturn[0] += 18
+        pointReturn[1] += 20
+        pointReturn[2] += 16
+        pointReturn[3] += 46
     }
     
     else if userAnswer.contains("ornate golden casket")
     {
-        print("gold!!")
+       
+        pointReturn[0] += 19
+        pointReturn[1] += 44
+        pointReturn[2] += 21
+        pointReturn[3] += 19
         
     }
     
+    else if userAnswer.contains("Attempt to confuse")
+    {
+      
+        pointReturn[0] += 49
+        pointReturn[1] += 19
+        pointReturn[2] += 17
+        pointReturn[3] += 17
+        
+    }
+   
     else if userAnswer.contains("small pewter box")
     {
-        print("small!!")
+      
+        pointReturn[0] += 49
+        pointReturn[1] += 19
+        pointReturn[2] += 17
+        pointReturn[3] += 17
+        
+    } else if userAnswer.contains("small pewter box")
+    {
+      
+        pointReturn[0] += 49
+        pointReturn[1] += 19
+        pointReturn[2] += 17
+        pointReturn[3] += 17
+        
+    } else if userAnswer.contains("small pewter box")
+    {
+      
+        pointReturn[0] += 49
+        pointReturn[1] += 19
+        pointReturn[2] += 17
+        pointReturn[3] += 17
+        
+    } else if userAnswer.contains("small pewter box")
+    {
+      
+        pointReturn[0] += 49
+        pointReturn[1] += 19
+        pointReturn[2] += 17
+        pointReturn[3] += 17
         
     }
     return pointReturn

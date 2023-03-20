@@ -106,7 +106,7 @@ class ViewController: UIViewController {
         }
             
        // print("Question Number updated to:", questionNum)
-        
+             updateUI()
     }
     
     func updateAnswers()
@@ -140,6 +140,17 @@ class ViewController: UIViewController {
     }
     
     
+    
+    func updateUI()
+    {
+        if (questionLabelNum - 1 == 6)
+        {
+            //fix constraints and show 3/4 outlett
+            print("done with 2c")
+        }
+        
+        
+    }
     @IBAction func resetButton(_ sender: Any) {
         
         //print("userpoints grff before reset",userPoints[0])
@@ -158,7 +169,8 @@ class ViewController: UIViewController {
         displayQuestion.text = questionBank[0]
         choice1Outlet.setTitle(answer2C[0], for: .normal)
         choice2Outlet.setTitle(answer2C[1], for: .normal)
-        
+        choice3Outlet.setTitle("Button", for: .normal)
+        choice4Outlet.setTitle("Button", for: .normal)
         
     }
  

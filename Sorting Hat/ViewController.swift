@@ -82,7 +82,6 @@ class ViewController: UIViewController {
         updateAnswers()
 
         //pointPrintTest()
-        //pp
     }
     
   
@@ -97,17 +96,20 @@ class ViewController: UIViewController {
             displayQuestion.text = questionBank[questionLabelNum - 1]
             questionNumberOutlet.text = String(questionLabelNum)
         }
-        else
+       else//(questionLabelNum < 20 && questionLabelNum > 6)
         {
             questionNum4C += 1
             questionLabelNum += 1
             
             displayQuestion.text = questionBank[questionLabelNum - 1]
             questionNumberOutlet.text = String(questionLabelNum)
-        }
+       }
             
-       // print("Question Number updated to:", questionNum)
-             updateUI()
+       // else{
+        //    getLastQuestion()
+        //}
+        
+         updateUI()
     }
     
     func updateAnswers()
@@ -128,14 +130,23 @@ class ViewController: UIViewController {
             // do 4 choice answers
             //print("Question = ",questionNum2C)
             //print("Inside the else!!!")
-            //print(answer4C[answerNum4C])
+           // print(answer4C[answerNum4C])
             //print(answer4C[answerNum4C+1])
             choice1Outlet.setTitle(answer4C[answerNum4C], for: .normal)
             choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
             choice3Outlet.setTitle(answer4C[answerNum4C + 2], for: .normal)
             choice4Outlet.setTitle(answer4C[answerNum4C + 3], for: .normal)
+           // if(answerNum4C != 48)
+            //{
+              //  print(answerNum4C)
+                answerNum4C += 4
+           // }
+            /*
+            else{
+                getLastQuestion()
+            }
+             */
             
-            answerNum4C += 4
         }
         
     }
@@ -149,7 +160,24 @@ class ViewController: UIViewController {
             //fix constraints and show 3/4 outlett
             print("done with 2c")
         }
+        else if(questionLabelNum - 1 > 6 && questionLabelNum - 1 < 21)
+        {
+            //show
+        }
+        else if(questionLabelNum == 21)
+        {
+            print("last question")
+            getLastQuestion()
+        }
+    }
+    
+    func getLastQuestion()
+    {
         
+        
+    }
+    func showResults()
+    {
         
     }
     @IBAction func resetButton(_ sender: Any) {
@@ -170,8 +198,8 @@ class ViewController: UIViewController {
         displayQuestion.text = questionBank[0]
         choice1Outlet.setTitle(answer2C[0], for: .normal)
         choice2Outlet.setTitle(answer2C[1], for: .normal)
-        choice3Outlet.setTitle("Button", for: .normal)
-        choice4Outlet.setTitle("Button", for: .normal)
+        choice3Outlet.setTitle(" ", for: .normal)
+        choice4Outlet.setTitle(" ", for: .normal)
         
     }
  
@@ -181,7 +209,7 @@ class ViewController: UIViewController {
         print("Rav points is:", userPoints[1])
         print("Huff points is: ", userPoints[2])
         print("Slyth points is:",userPoints[3])
-        print("||||||||")
+        print("|----------------------------|")
     }
 }
 

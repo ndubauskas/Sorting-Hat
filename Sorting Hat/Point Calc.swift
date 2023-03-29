@@ -559,6 +559,224 @@ func calcPoints(userAnswer: String) -> [Int]
         pointReturn[3] += 47
         
     }
+    else if userAnswer.contains("Love?")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 18
+        pointReturn[2] += 44
+        pointReturn[3] += 20
+        
+    }
+    else if userAnswer.contains("Glory?")
+    {
+      
+        pointReturn[0] += 47
+        pointReturn[1] += 19
+        pointReturn[2] += 17
+        pointReturn[3] += 17
+        
+    }
+    else if userAnswer.contains("Wisdom?")
+    {
+      
+        pointReturn[0] += 18
+        pointReturn[1] += 43
+        pointReturn[2] += 20
+        pointReturn[3] += 18
+        
+    }
+    else if userAnswer.contains("Power?")
+    {
+      
+        pointReturn[0] += 16
+        pointReturn[1] += 20
+        pointReturn[2] += 20
+        pointReturn[3] += 45
+        
+    }
+    else if userAnswer.contains("The power of invisibility")
+    {
+        pointReturn[0] += 33
+        pointReturn[1] += 10
+        pointReturn[2] += 14
+        pointReturn[3] += 13
+        
+    }
+    else if userAnswer.contains("The power of superhuman strength")
+    {
+      
+        pointReturn[0] += 13
+        pointReturn[1] += 9
+        pointReturn[2] += 26
+        pointReturn[3] += 18
+        
+    }
+    
+    else if userAnswer.contains("The power to speak to animals")
+    {
+      
+        pointReturn[0] += 11
+        pointReturn[1] += 19
+        pointReturn[2] += 24
+        pointReturn[3] += 9
+        
+    }
+    else if userAnswer.contains("The power to change the past")
+    {
+      
+        pointReturn[0] += 18
+        pointReturn[1] += 13
+        pointReturn[2] += 13
+        pointReturn[3] += 28
+        
+    }
+    else if userAnswer.contains("The wide, sunny")
+    {
+      
+        pointReturn[0] += 18
+        pointReturn[1] += 14
+        pointReturn[2] += 41
+        pointReturn[3] += 18
+        
+    }
+    else if userAnswer.contains("The narrow, dark, lantern-lit")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 20
+        pointReturn[2] += 17
+        pointReturn[3] += 44
+        
+    }
+    
+    else if userAnswer.contains("The twisting, leaf-strewn path through")
+    {
+      
+        pointReturn[0] += 44
+        pointReturn[1] += 22
+        pointReturn[2] += 19
+        pointReturn[3] += 23
+        
+    }
+    
+    else if userAnswer.contains("The cobbled street lined with")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 43
+        pointReturn[2] += 23
+        pointReturn[3] += 14
+        
+    }
+    else if userAnswer.contains("Proceed with caution, keeping one hand")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 17
+        pointReturn[2] += 43
+        pointReturn[3] += 21
+        
+    }
+    else if userAnswer.contains("Draw your wand and try to discover")
+    {
+      
+        pointReturn[0] += 45
+        pointReturn[1] += 21
+        pointReturn[2] += 17
+        pointReturn[3] += 19
+        
+    }
+    else if userAnswer.contains("Draw your wand and stand your ground?")
+    {
+      
+        pointReturn[0] += 17
+        pointReturn[1] += 19
+        pointReturn[2] += 19
+        pointReturn[3] += 42
+        
+    }
+    else if userAnswer.contains("Withdraw into the shadows to await developments,")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 44
+        pointReturn[2] += 21
+        pointReturn[3] += 19
+        
+    }
+    else if userAnswer.contains("Apparition and Disapparition")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 6
+        pointReturn[2] += 9
+        pointReturn[3] += 23
+        
+    }
+    else if userAnswer.contains("Flying on a broomstick")
+    {
+      
+        pointReturn[0] += 19
+        pointReturn[1] += 7
+        pointReturn[2] += 18
+        pointReturn[3] += 9
+        
+    }
+    else if userAnswer.contains("All about magical creatures, and how to ")
+    {
+      
+        pointReturn[0] += 9
+        pointReturn[1] += 9
+        pointReturn[2] += 27
+        pointReturn[3] += 10
+        
+    }
+    else if userAnswer.contains("Every area of magic I can")
+    {
+      
+        pointReturn[0] += 11
+        pointReturn[1] += 27
+        pointReturn[2] += 11
+        pointReturn[3] += 10
+        
+    }
+    else if userAnswer.contains("Imitated?")
+    {
+      
+        pointReturn[0] += 16
+        pointReturn[1] += 31
+        pointReturn[2] += 13
+        pointReturn[3] += 12
+        
+    }
+    else if userAnswer.contains("Trusted?")
+    {
+      
+        pointReturn[0] += 24
+        pointReturn[1] += 8
+        pointReturn[2] += 23
+        pointReturn[3] += 9
+        
+    }
+    else if userAnswer.contains("Liked?")
+    {
+      
+        pointReturn[0] += 15
+        pointReturn[1] += 12
+        pointReturn[2] += 29
+        pointReturn[3] += 10
+        
+    }
+    else if userAnswer.contains("Feared?")
+    {
+      
+        pointReturn[0] += 12
+        pointReturn[1] += 15
+        pointReturn[2] += 14
+        pointReturn[3] += 26
+        
+    }
     return pointReturn
 }
 

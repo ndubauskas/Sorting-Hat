@@ -28,7 +28,6 @@ let questionBank = ["Dawn or Dusk?","Forest or River?", "Moon or Stars?","Black 
     ,"How would you like to be known to history?"
     ,"A Muggle confronts you and says that they are sure you are a witch or wizard. Do you:"
     ,"Which nightmare would frighten you most?"
-    ,"If you were attending Hogwarts, which pet would you choose to take with you?"
     ,"Given the choice, would you rather invent a potion that would guarantee you:"
     ,"If you could have any power, which would you choose?"
     ,"Which road tempts you most?"
@@ -75,6 +74,7 @@ let answer4C = ["The small tortoiseshell box, embellished with gold.","The gleam
     "Ask for more stories about your adventures",
     "Think with admiration of your achievements",
     "I don't care what people think of me after I'm dead.",
+                
     "The Wise",
     "The Good",
     "The Bold",
@@ -114,7 +114,7 @@ let answer4C = ["The small tortoiseshell box, embellished with gold.","The gleam
                 
     "Imitated?","Liked?","Feared?","Trusted?"]
 
-let lastQuestionAnswers = ["Tabby cat",
+/*let lastQuestionAnswers = ["Tabby cat",
                            "Siamese cat",
                            "Ginger cat",
                            "Black cat",
@@ -129,6 +129,7 @@ let lastQuestionAnswers = ["Tabby cat",
                            "Dragon toad",
                            "Harlequin toad",
                            "Three toed tree toad"]
+*/
 
 //Four choice answers
 

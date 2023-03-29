@@ -15,16 +15,20 @@ class ViewController: UIViewController {
         displayQuestion.text = questionBank[0]
         choice1Outlet.setTitle(answer2C[0], for: .normal)
         choice2Outlet.setTitle(answer2C[1], for: .normal)
+        choice3Outlet.setTitle(" ", for: .normal)
+        choice4Outlet.setTitle(" ", for: .normal)
         questionNum2C = 0
         answerNum2C = 0
         questionLabelNum = 1
         questionNumberOutlet.text = "1"
         answerNum4C = 0
+        lastQuestion = false
         
     }
     
-   
+   var lastQuestion = false
     var userAnswer = ""
+    var resultString = ["","", "",""]
     // Array order is: Griff, Ravn, Huff, Slyth
     var userPoints = [0,0,0,0]
     
@@ -96,7 +100,7 @@ class ViewController: UIViewController {
             displayQuestion.text = questionBank[questionLabelNum - 1]
             questionNumberOutlet.text = String(questionLabelNum)
         }
-       else//(questionLabelNum < 20 && questionLabelNum > 6)
+       else if(questionLabelNum < 25 && questionLabelNum > 6)
         {
             questionNum4C += 1
             questionLabelNum += 1
@@ -104,12 +108,11 @@ class ViewController: UIViewController {
             displayQuestion.text = questionBank[questionLabelNum - 1]
             questionNumberOutlet.text = String(questionLabelNum)
        }
+        else if(lastQuestion == true)
+        {
+            showResults()
+        }
             
-       // else{
-        //    getLastQuestion()
-        //}
-        
-         updateUI()
     }
     
     func updateAnswers()
@@ -125,59 +128,59 @@ class ViewController: UIViewController {
             //print("Question Num 2C is = ",questionNum2C)
         }
         
-        else
+        else if (questionLabelNum - 1 < 25)
         {
-            // do 4 choice answers
-            //print("Question = ",questionNum2C)
-            //print("Inside the else!!!")
-           // print(answer4C[answerNum4C])
-            //print(answer4C[answerNum4C+1])
-            choice1Outlet.setTitle(answer4C[answerNum4C], for: .normal)
-            choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
-            choice3Outlet.setTitle(answer4C[answerNum4C + 2], for: .normal)
-            choice4Outlet.setTitle(answer4C[answerNum4C + 3], for: .normal)
-           // if(answerNum4C != 48)
-            //{
-              //  print(answerNum4C)
-                answerNum4C += 4
-           // }
-            /*
-            else{
+            
+            if(answerNum4C + 4 == 76)
+            {
                 getLastQuestion()
             }
-             */
-            
+            // do 4 choice answers
+           // print(answer4C[answerNum4C])
+            //print(answer4C[answerNum4C+1])
+            else{
+                choice1Outlet.setTitle(answer4C[answerNum4C], for: .normal)
+                choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
+                choice3Outlet.setTitle(answer4C[answerNum4C + 2], for: .normal)
+                choice4Outlet.setTitle(answer4C[answerNum4C + 3], for: .normal)
+                answerNum4C += 4
+                
+            }
         }
         
-    }
-    
-    
-    
-    func updateUI()
-    {
-        if (questionLabelNum - 1 == 6)
-        {
-            //fix constraints and show 3/4 outlett
-            print("done with 2c")
-        }
-        else if(questionLabelNum - 1 > 6 && questionLabelNum - 1 < 21)
-        {
-            //show
-        }
-        else if(questionLabelNum == 21)
-        {
-            print("last question")
-            getLastQuestion()
-        }
     }
     
     func getLastQuestion()
     {
         
+        if(lastQuestion == false)
+        {
+            choice1Outlet.setTitle(answer4C[answerNum4C], for: .normal)
+            choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
+            choice3Outlet.setTitle(answer4C[answerNum4C + 2], for: .normal)
+            choice4Outlet.setTitle(answer4C[answerNum4C + 3], for: .normal)
+            print("@last question")
+            //showResults()
+            lastQuestion = true
+            
+        }
         
     }
     func showResults()
     {
+        if(lastQuestion == true)
+        {
+            resultString[0] = String(userPoints[0])
+            resultString[1] = String(userPoints[1])
+            resultString[2] = String(userPoints[2])
+            resultString[3] = String(userPoints[3])
+            choice1Outlet.setTitle(resultString[0], for: .normal)
+            choice2Outlet.setTitle(resultString[1], for: .normal)
+            choice3Outlet.setTitle(resultString[2], for: .normal)
+            choice4Outlet.setTitle(resultString[3], for: .normal)
+            displayQuestion.text = "Results!!"
+            //print("in show results")
+        }
         
     }
     @IBAction func resetButton(_ sender: Any) {
@@ -186,15 +189,10 @@ class ViewController: UIViewController {
         answerNum2C = 0
         answerNum4C = 0
         questionNum2C = 0
-        /*
-        userPoints[0] = 0
-        userPoints[1] = 0
-        userPoints[2] = 0
-        userPoints[3] = 0
-         */
         userPoints = resetPoints()
         questionLabelNum = 1
         questionNumberOutlet.text = "1"
+        lastQuestion = false
         displayQuestion.text = questionBank[0]
         choice1Outlet.setTitle(answer2C[0], for: .normal)
         choice2Outlet.setTitle(answer2C[1], for: .normal)

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -24,13 +23,12 @@ class ViewController: UIViewController {
         answerNum4C = 0
         lastQuestion = false
         
+       
     }
-    
-   var lastQuestion = false
-    var userAnswer = ""
-    var resultString = ["","", "",""]
+   
+   
     // Array order is: Griff, Ravn, Huff, Slyth
-    var userPoints = [0,0,0,0]
+
     
     @IBOutlet weak var questionNumberOutlet: UILabel!
     
@@ -44,7 +42,7 @@ class ViewController: UIViewController {
         userPoints = calcPoints(userAnswer: userAnswer)
         updateQuestion()
         updateAnswers()
-       
+      // print("GRIF POINTS: ",userPoints[0])
         
         //pointPrintTest()
     }
@@ -57,8 +55,6 @@ class ViewController: UIViewController {
         userPoints = calcPoints(userAnswer: userAnswer)
         updateQuestion()
         updateAnswers()
-      
-        //pointPrintTest()
 
     }
     
@@ -72,8 +68,6 @@ class ViewController: UIViewController {
         updateAnswers()
         
         
-        //pointPrintTest()
-        
     }
     
     @IBOutlet weak var choice4Outlet: UIButton!
@@ -85,10 +79,32 @@ class ViewController: UIViewController {
         updateQuestion()
         updateAnswers()
 
-        //pointPrintTest()
     }
     
-  
+    @IBAction func retakeButton(_ sender: UIButton) {
+      
+        userPoints = resetPoints()
+        answerNum2C = 0
+        answerNum4C = 0
+        questionNum2C = 0
+        questionLabelNum = 1
+        questionNumberOutlet.text = "1"
+        lastQuestion = false
+        displayQuestion.text = questionBank[0]
+        choice1Outlet.setTitle(answer2C[0], for: .normal)
+        choice2Outlet.setTitle(answer2C[1], for: .normal)
+        choice3Outlet.setTitle(" ", for: .normal)
+        choice4Outlet.setTitle(" ", for: .normal)
+        pointReturn[0] = 0
+        pointReturn[1] = 0
+        pointReturn[2] = 0
+        pointReturn[3] = 0
+        griffProgressBar.isHidden = true
+        huffProgressBar.isHidden = true
+        ravnProgressBar.isHidden = true
+        slythProgressBar.isHidden = true
+        
+    }
     func updateQuestion()
     {
         
@@ -124,8 +140,7 @@ class ViewController: UIViewController {
             
             choice1Outlet.setTitle(answer2C[answerNum2C], for: .normal)
             choice2Outlet.setTitle(answer2C[answerNum2C + 1], for: .normal)
-               // print("inside 2c!!!")
-            //print("Question Num 2C is = ",questionNum2C)
+           
         }
         
         else if (questionLabelNum - 1 < 25)
@@ -135,9 +150,6 @@ class ViewController: UIViewController {
             {
                 getLastQuestion()
             }
-            // do 4 choice answers
-           // print(answer4C[answerNum4C])
-            //print(answer4C[answerNum4C+1])
             else{
                 choice1Outlet.setTitle(answer4C[answerNum4C], for: .normal)
                 choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
@@ -159,8 +171,7 @@ class ViewController: UIViewController {
             choice2Outlet.setTitle(answer4C[answerNum4C + 1], for: .normal)
             choice3Outlet.setTitle(answer4C[answerNum4C + 2], for: .normal)
             choice4Outlet.setTitle(answer4C[answerNum4C + 3], for: .normal)
-            print("@last question")
-            //showResults()
+            showResults()
             lastQuestion = true
             
         }
@@ -170,37 +181,40 @@ class ViewController: UIViewController {
     {
         if(lastQuestion == true)
         {
-            resultString[0] = String(userPoints[0])
-            resultString[1] = String(userPoints[1])
-            resultString[2] = String(userPoints[2])
-            resultString[3] = String(userPoints[3])
+            
+            let totalPointAmount = userPoints[0]+userPoints[1]+userPoints[2]+userPoints[3]
+            print(totalPointAmount)
+            var doubleConvertion: [Double] = [0.0,0.0,0.0,0.0]
+            
+        
+                for index in 0..<4{
+                    doubleConvertion[index] = Double(userPoints[index])/Double(totalPointAmount)
+                    resultString[index] = String(doubleConvertion[index])
+                }
+            griffProgressBar.isHidden = false
+            huffProgressBar.isHidden = false
+            ravnProgressBar.isHidden = false
+            slythProgressBar.isHidden = false
             choice1Outlet.setTitle(resultString[0], for: .normal)
             choice2Outlet.setTitle(resultString[1], for: .normal)
             choice3Outlet.setTitle(resultString[2], for: .normal)
             choice4Outlet.setTitle(resultString[3], for: .normal)
             displayQuestion.text = "Results!!"
+            griffProgressBar.progress = Float(doubleConvertion[0])
+            ravnProgressBar.progress = Float(doubleConvertion[1])
+            huffProgressBar.progress = Float(doubleConvertion[2])
+            slythProgressBar.progress = Float(doubleConvertion[3])
             //print("in show results")
         }
         
     }
-    @IBAction func resetButton(_ sender: Any) {
-        
-        //print("userpoints grff before reset",userPoints[0])
-        answerNum2C = 0
-        answerNum4C = 0
-        questionNum2C = 0
-        userPoints = resetPoints()
-        questionLabelNum = 1
-        questionNumberOutlet.text = "1"
-        lastQuestion = false
-        displayQuestion.text = questionBank[0]
-        choice1Outlet.setTitle(answer2C[0], for: .normal)
-        choice2Outlet.setTitle(answer2C[1], for: .normal)
-        choice3Outlet.setTitle(" ", for: .normal)
-        choice4Outlet.setTitle(" ", for: .normal)
-        
-    }
  
+    @IBOutlet weak var griffProgressBar: UIProgressView!
+    @IBOutlet weak var slythProgressBar: UIProgressView!
+    
+    @IBOutlet weak var huffProgressBar: UIProgressView!
+    @IBOutlet weak var ravnProgressBar: UIProgressView!
+    /*
     func pointPrintTest()
     {
         print("Griff points is:",userPoints[0])
@@ -209,6 +223,7 @@ class ViewController: UIViewController {
         print("Slyth points is:",userPoints[3])
         print("|----------------------------|")
     }
+  */
 }
 
 

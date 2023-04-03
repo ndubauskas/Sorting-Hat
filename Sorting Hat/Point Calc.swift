@@ -7,9 +7,11 @@
 
 import Foundation
 //Total points for each house
+//Griff
 var pointReturn = [0,0,0,0]
 let pointReset = [0,0,0,0]
-
+var userPoints = [0,0,0,0]
+var resultString = ["","", "",""]
 func resetPoints() -> [Int]
 {
     return pointReset
@@ -19,11 +21,11 @@ func calcPoints(userAnswer: String) -> [Int]
     
     if userAnswer.contains("Dawn")
     {
+   
         pointReturn[0] += 73
         pointReturn[1] += 73
-        pointReturn[2] += 30
+        pointReturn[2] += 30    
         pointReturn[3] += 26
-     
     }
     else if userAnswer.contains("Dusk")
     {
@@ -67,7 +69,7 @@ func calcPoints(userAnswer: String) -> [Int]
         
     }
     
-    else if userAnswer.contains("Black")
+    else if (userAnswer == "Black")
     {
         pointReturn[0] += 73
         pointReturn[1] += 29

@@ -52,6 +52,7 @@
 		0160E3B829C0FEEB009D434E /* Sorting HatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorting HatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0160E3BC29C0FEEB009D434E /* Sorting_HatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_HatUITests.swift; sourceTree = "<group>"; };
 		0160E3BE29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_HatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01BC136C29F1E4E600EF1EC3 /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		01BEC07229C2741A001273FC /* Point Calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Point Calc.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +113,7 @@
 				0160E3A929C0FEEB009D434E /* Info.plist */,
 				01505A1229C108D1002B3981 /* Question.swift */,
 				01BEC07229C2741A001273FC /* Point Calc.swift */,
+				01BC136C29F1E4E600EF1EC3 /* View.h */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";

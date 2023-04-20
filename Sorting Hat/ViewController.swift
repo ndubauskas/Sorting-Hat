@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -22,7 +23,10 @@ class ViewController: UIViewController {
         questionNumberOutlet.text = "1"
         answerNum4C = 0
         lastQuestion = false
-        
+        griffProgressBar.isHidden = true
+        huffProgressBar.isHidden = true
+        ravnProgressBar.isHidden = true
+        slythProgressBar.isHidden = true
        
     }
    
@@ -205,6 +209,7 @@ class ViewController: UIViewController {
             huffProgressBar.progress = Float(doubleConvertion[2])
             slythProgressBar.progress = Float(doubleConvertion[3])
             //print("in show results")
+            
         }
         
     }

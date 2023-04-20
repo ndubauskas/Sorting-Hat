@@ -16,130 +16,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUm-iz-OFD">
-                                <rect key="frame" x="41" y="225" width="324" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="j40-WR-Qv2"/>
-                                    <constraint firstAttribute="width" constant="324" id="zIo-M5-BKX"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="choice1Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT2-DV-Kkq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkY-2R-w2i">
-                                <rect key="frame" x="41" y="329" width="324" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="8MI-sb-Fb1"/>
-                                    <constraint firstAttribute="width" constant="324" id="bFh-16-3ZH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkY-2R-w2i">
+                                <rect key="frame" x="41" y="412" width="316" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="choice2Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05S-pb-sqS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cH-eK-XOZ">
-                                <rect key="frame" x="41" y="413" width="324" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="1HU-lT-761"/>
-                                    <constraint firstAttribute="width" constant="324" id="NMl-kC-bh5"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cH-eK-XOZ">
+                                <rect key="frame" x="41" y="505" width="316" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="choice3Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z11-l8-hKB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-p8-kzk">
-                                <rect key="frame" x="41" y="80" width="324" height="76"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-p8-kzk">
+                                <rect key="frame" x="41" y="136" width="316" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNv-mg-aps">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNv-mg-aps">
                                 <rect key="frame" x="41" y="59" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="xtX-kf-Wxw"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s4-Sn-HhZ">
-                                <rect key="frame" x="41" y="528" width="324" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="324" id="8Jn-uD-fMx"/>
-                                    <constraint firstAttribute="height" constant="71" id="pfp-U4-hWA"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s4-Sn-HhZ">
+                                <rect key="frame" x="41" y="611" width="316" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="choice4Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPX-MD-IQd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gs-4e-5hx">
-                                <rect key="frame" x="280" y="80" width="77" height="35"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="UIu-uR-t9S">
+                                <rect key="frame" x="31" y="763" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemRedColor"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-0l-8v7">
+                                <rect key="frame" x="207" y="764" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="linkColor"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ntj-Ij-ldu">
+                                <rect key="frame" x="31" y="812" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemYellowColor"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-2a-qTS">
+                                <rect key="frame" x="215" y="813" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUm-iz-OFD">
+                                <rect key="frame" x="41" y="308" width="316" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="choice1Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT2-DV-Kkq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gs-4e-5hx">
+                                <rect key="frame" x="287" y="59" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Retake"/>
                                 <connections>
                                     <action selector="retakeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4c-8Q-JFz"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="UIu-uR-t9S">
-                                <rect key="frame" x="31" y="668" width="150" height="4"/>
-                                <color key="progressTintColor" systemColor="systemRedColor"/>
-                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-0l-8v7">
-                                <rect key="frame" x="207" y="669" width="150" height="4"/>
-                                <color key="progressTintColor" systemColor="linkColor"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ntj-Ij-ldu">
-                                <rect key="frame" x="31" y="718" width="150" height="4"/>
-                                <color key="progressTintColor" systemColor="systemYellowColor"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-2a-qTS">
-                                <rect key="frame" x="215" y="718" width="150" height="4"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="7NB-r8-lxi"/>
-                                </constraints>
-                                <color key="progressTintColor" systemColor="systemGreenColor"/>
-                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
-                        <constraints>
-                            <constraint firstItem="2cH-eK-XOZ" firstAttribute="trailing" secondItem="Tmt-2a-qTS" secondAttribute="trailing" id="0qz-Y5-N7L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tmt-2a-qTS" secondAttribute="bottom" constant="96" id="43h-mI-nCn"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="leading" secondItem="2cH-eK-XOZ" secondAttribute="leading" id="4V8-PB-w76"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="trailing" secondItem="Tmt-2a-qTS" secondAttribute="trailing" id="83v-d5-Uh8"/>
-                            <constraint firstItem="Tmt-2a-qTS" firstAttribute="top" secondItem="MSw-0l-8v7" secondAttribute="bottom" constant="45" id="GKu-s9-bv1"/>
-                            <constraint firstItem="MSw-0l-8v7" firstAttribute="trailing" secondItem="9Gs-4e-5hx" secondAttribute="trailing" id="HCr-zr-bdt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MSw-0l-8v7" secondAttribute="trailing" constant="36" id="Lwp-RC-u1t"/>
-                            <constraint firstItem="MSw-0l-8v7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="207" id="McZ-RV-RSw"/>
-                            <constraint firstItem="ntj-Ij-ldu" firstAttribute="trailing" secondItem="UIu-uR-t9S" secondAttribute="trailing" id="Ndg-Xy-yJu"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="top" secondItem="ndP-p8-kzk" secondAttribute="bottom" constant="69" id="OKo-lr-do5"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="Smi-Rt-POx"/>
-                            <constraint firstItem="Tmt-2a-qTS" firstAttribute="top" secondItem="ntj-Ij-ldu" secondAttribute="top" id="Uxs-jv-oT4"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="leading" secondItem="ndP-p8-kzk" secondAttribute="leading" id="Xhh-da-eOc"/>
-                            <constraint firstItem="2cH-eK-XOZ" firstAttribute="top" secondItem="fkY-2R-w2i" secondAttribute="bottom" constant="8" id="YSt-eb-qvm"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="225" id="aBg-NS-yln"/>
-                            <constraint firstItem="Tmt-2a-qTS" firstAttribute="leading" secondItem="ntj-Ij-ldu" secondAttribute="trailing" constant="34" id="deu-y2-OMX"/>
-                            <constraint firstItem="ntj-Ij-ldu" firstAttribute="top" secondItem="UIu-uR-t9S" secondAttribute="bottom" constant="46" id="e7C-kV-v6W"/>
-                            <constraint firstItem="fkY-2R-w2i" firstAttribute="top" secondItem="dUm-iz-OFD" secondAttribute="bottom" constant="8" id="eEC-nx-hG0"/>
-                            <constraint firstItem="ndP-p8-kzk" firstAttribute="top" secondItem="fNv-mg-aps" secondAttribute="bottom" id="eht-Gf-7eK"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="trailing" secondItem="ndP-p8-kzk" secondAttribute="trailing" id="ihK-ab-5OM"/>
-                            <constraint firstItem="0s4-Sn-HhZ" firstAttribute="top" secondItem="2cH-eK-XOZ" secondAttribute="bottom" constant="34" id="lTI-5h-FcS"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="leading" secondItem="0s4-Sn-HhZ" secondAttribute="leading" id="meH-2w-VcJ"/>
-                            <constraint firstItem="ntj-Ij-ldu" firstAttribute="leading" secondItem="UIu-uR-t9S" secondAttribute="leading" id="n3X-GV-qcb"/>
-                            <constraint firstItem="ntj-Ij-ldu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="pdq-nD-vwE"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="leading" secondItem="fNv-mg-aps" secondAttribute="leading" id="rFF-2D-Tf3"/>
-                            <constraint firstItem="9Gs-4e-5hx" firstAttribute="top" secondItem="ndP-p8-kzk" secondAttribute="top" id="tv2-ud-dTu"/>
-                            <constraint firstItem="dUm-iz-OFD" firstAttribute="leading" secondItem="fkY-2R-w2i" secondAttribute="leading" id="ur4-MF-VQY"/>
-                            <constraint firstItem="fNv-mg-aps" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w7s-mq-WgM"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="choice1Outlet" destination="dUm-iz-OFD" id="PoU-LV-OBs"/>

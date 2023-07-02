@@ -31,10 +31,12 @@ class ViewController: UIViewController {
         questionNumberOutlet.text = "1"
         answerNum4C = 0
         lastQuestion = false
+        /*
         griffProgressBar.isHidden = true
         huffProgressBar.isHidden = true
         ravnProgressBar.isHidden = true
         slythProgressBar.isHidden = true
+         */
        
     }
     // Array order is: Griff, Ravn, Huff, Slyth

@@ -8,10 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let secondVC = SecondViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        initiliazeVariables()
+       // let vc = storyboard?.instantiateViewController(withIdentifier: "second_VC") as! SecondViewController
+    }
+    
+    func initiliazeVariables()
+    {
         displayQuestion.text = questionBank[0]
         choice1Outlet.setTitle(answer2C[0], for: .normal)
         choice2Outlet.setTitle(answer2C[1], for: .normal)
@@ -23,16 +31,9 @@ class ViewController: UIViewController {
         questionNumberOutlet.text = "1"
         answerNum4C = 0
         lastQuestion = false
-        griffProgressBar.isHidden = true
-        huffProgressBar.isHidden = true
-        ravnProgressBar.isHidden = true
-        slythProgressBar.isHidden = true
-       
     }
-   
-   
     // Array order is: Griff, Ravn, Huff, Slyth
-
+    
     
     @IBOutlet weak var questionNumberOutlet: UILabel!
     
@@ -46,9 +47,7 @@ class ViewController: UIViewController {
         userPoints = calcPoints(userAnswer: userAnswer)
         updateQuestion()
         updateAnswers()
-      // print("GRIF POINTS: ",userPoints[0])
         
-        //pointPrintTest()
     }
     
     @IBOutlet weak var choice2Outlet: UIButton!
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
         userPoints = calcPoints(userAnswer: userAnswer)
         updateQuestion()
         updateAnswers()
-
+        
     }
     
     @IBOutlet weak var choice3Outlet: UIButton!
@@ -82,11 +81,17 @@ class ViewController: UIViewController {
         userPoints = calcPoints(userAnswer: userAnswer)
         updateQuestion()
         updateAnswers()
-
+        
     }
     
+    
     @IBAction func retakeButton(_ sender: UIButton) {
-      
+        print("reset button")
+        
+        resetEverything()
+    }
+    func resetEverything()
+    {
         userPoints = resetPoints()
         answerNum2C = 0
         answerNum4C = 0
@@ -103,11 +108,6 @@ class ViewController: UIViewController {
         pointReturn[1] = 0
         pointReturn[2] = 0
         pointReturn[3] = 0
-        griffProgressBar.isHidden = true
-        huffProgressBar.isHidden = true
-        ravnProgressBar.isHidden = true
-        slythProgressBar.isHidden = true
-        
     }
     func updateQuestion()
     {
@@ -120,19 +120,19 @@ class ViewController: UIViewController {
             displayQuestion.text = questionBank[questionLabelNum - 1]
             questionNumberOutlet.text = String(questionLabelNum)
         }
-       else if(questionLabelNum < 25 && questionLabelNum > 6)
+        else if(questionLabelNum < 25 && questionLabelNum > 6)
         {
             questionNum4C += 1
             questionLabelNum += 1
             
             displayQuestion.text = questionBank[questionLabelNum - 1]
             questionNumberOutlet.text = String(questionLabelNum)
-       }
+        }
         else if(lastQuestion == true)
         {
             showResults()
         }
-            
+        
     }
     
     func updateAnswers()
@@ -144,7 +144,7 @@ class ViewController: UIViewController {
             
             choice1Outlet.setTitle(answer2C[answerNum2C], for: .normal)
             choice2Outlet.setTitle(answer2C[answerNum2C + 1], for: .normal)
-           
+            
         }
         
         else if (questionLabelNum - 1 < 25)
@@ -186,49 +186,38 @@ class ViewController: UIViewController {
         if(lastQuestion == true)
         {
             
-            let totalPointAmount = userPoints[0]+userPoints[1]+userPoints[2]+userPoints[3]
-            print(totalPointAmount)
-            var doubleConvertion: [Double] = [0.0,0.0,0.0,0.0]
+            //let totalPointAmount = userPoints[0]+userPoints[1]+userPoints[2]+userPoints[3]
+                // print(totalPointAmount)
+           // var doubleConvertion: [Double] = [0.0,0.0,0.0,0.0]
             
-        
-                for index in 0..<4{
-                    doubleConvertion[index] = Double(userPoints[index])/Double(totalPointAmount)
-                    resultString[index] = String(doubleConvertion[index])
-                }
-            griffProgressBar.isHidden = false
-            huffProgressBar.isHidden = false
-            ravnProgressBar.isHidden = false
-            slythProgressBar.isHidden = false
+            /*
+            for index in 0..<4{
+                doubleConvertion[index] = Double(userPoints[index])/Double(totalPointAmount)
+                resultString[index] = String(doubleConvertion[index])
+            }
+            
             choice1Outlet.setTitle(resultString[0], for: .normal)
             choice2Outlet.setTitle(resultString[1], for: .normal)
             choice3Outlet.setTitle(resultString[2], for: .normal)
             choice4Outlet.setTitle(resultString[3], for: .normal)
-            displayQuestion.text = "Results!!"
-            griffProgressBar.progress = Float(doubleConvertion[0])
-            ravnProgressBar.progress = Float(doubleConvertion[1])
-            huffProgressBar.progress = Float(doubleConvertion[2])
-            slythProgressBar.progress = Float(doubleConvertion[3])
-            //print("in show results")
+             */
+            displayQuestion.text = "Share with people"
+            goToSecondVC()
+           //secondVC.checkResults()
+           // secondVC.showResults()
             
         }
-        
+     
     }
- 
-    @IBOutlet weak var griffProgressBar: UIProgressView!
-    @IBOutlet weak var slythProgressBar: UIProgressView!
-    
-    @IBOutlet weak var huffProgressBar: UIProgressView!
-    @IBOutlet weak var ravnProgressBar: UIProgressView!
-    /*
-    func pointPrintTest()
+    func goToSecondVC()
     {
-        print("Griff points is:",userPoints[0])
-        print("Rav points is:", userPoints[1])
-        print("Huff points is: ", userPoints[2])
-        print("Slyth points is:",userPoints[3])
-        print("|----------------------------|")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "second_VC") as! SecondViewController
+        present(vc,animated: true)
     }
-  */
+   
+    
+
 }
+
 
 

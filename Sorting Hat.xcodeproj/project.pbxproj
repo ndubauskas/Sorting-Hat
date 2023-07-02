@@ -116,6 +116,7 @@
 				0160E3A929C0FEEB009D434E /* Info.plist */,
 				01505A1229C108D1002B3981 /* Question.swift */,
 				01BEC07229C2741A001273FC /* Point Calc.swift */,
+				01BC136C29F1E4E600EF1EC3 /* View.h */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";

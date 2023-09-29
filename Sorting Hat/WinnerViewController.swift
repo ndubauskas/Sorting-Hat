@@ -15,9 +15,10 @@ class WinnerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        let navBar = navigationController?.navigationBar
         
+        
+    
         
         winner!.image = winnerImage
         let colorDictionary: [String: UIColor] = [
@@ -28,13 +29,11 @@ class WinnerViewController: UIViewController {
         ]
         
         if let winnerColor = colorDictionary[winnerColorString] {
-            let whiteColor = UIColor.white.cgColor
-            let blackColor = UIColor.black.cgColor
-            let houseCGColor = winnerColor.cgColor
-            
+          
+            navBar?.tintColor = colorDictionary[winnerColorString]
             let gradient: CAGradientLayer = CAGradientLayer()
-            gradient.colors = [whiteColor, houseCGColor, blackColor]
-            gradient.locations = [0.0, 0.5, 1.0]
+            gradient.colors = [UIColor.white.cgColor, winnerColor.cgColor, UIColor.black.cgColor]
+            gradient.locations = [0.0, 0.4, 1.0]
             gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
             gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
             gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
@@ -47,10 +46,6 @@ class WinnerViewController: UIViewController {
     }
     
     @IBOutlet weak var winner: UIImageView!
-//    override func viewWillDisappear(_ animated: Bool) {
-//        let mainVC = ViewController()
-//        mainVC.resetEverything()
-//     
-//    }
+
 }
 

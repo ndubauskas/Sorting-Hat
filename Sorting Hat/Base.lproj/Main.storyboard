@@ -128,6 +128,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vG1-fZ-P7m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="vby-kj-EEa"/>
                     <connections>

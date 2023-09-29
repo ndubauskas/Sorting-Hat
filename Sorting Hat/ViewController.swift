@@ -203,12 +203,9 @@ class ViewController: UIViewController {
         let slythHouse = housePoint(houseName: "sImage", totalPoints: userPoints[3], houseColor: "Green")
         
         let objects = [griffHouse,ravHouse,huffHouse,slythHouse]
-       //print(objects[0])
         let sorting = objects.sorted{$0.totalPoints > $1.totalPoints}
         
-//        print("First place = ",sorting[0].totalPoints)
-//        print("House name = ",sorting[0].houseName)
-//
+
         if segue.identifier == "goToWinner" {
             if let destinationVC = segue.destination as? WinnerViewController {
            
@@ -216,12 +213,7 @@ class ViewController: UIViewController {
                 if let image = UIImage(named: imageName){
                     destinationVC.winnerImage = image
                     destinationVC.winnerColorString = sorting[0].houseColor
-//                    if let houseColor = sorting[0].houseColor {
-//                        destinationVC.winnerColorString = houseColor
-//                              } else {
-//                                  print("Invalid color name: \(sorting[0].houseColor)")
-//                              }
-
+       
                     
                 }else {
                     print(":(")
@@ -232,9 +224,6 @@ class ViewController: UIViewController {
         
     }
 
-    
-    
-    
 }
     
 

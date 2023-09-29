@@ -18,7 +18,8 @@
 		0160E3BD29C0FEEB009D434E /* Sorting_HatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E3BC29C0FEEB009D434E /* Sorting_HatUITests.swift */; };
 		0160E3BF29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160E3BE29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift */; };
 		01BEC07329C2741A001273FC /* Point Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEC07229C2741A001273FC /* Point Calc.swift */; };
-		01E877352A0C23810055B167 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E877342A0C23810055B167 /* SecondViewController.swift */; };
+		0699B1EB2AC73F9B00E25C3C /* HousePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1EA2AC73F9B00E25C3C /* HousePoint.swift */; };
+		0699B1EF2AC7435700E25C3C /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1EE2AC7435700E25C3C /* WinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,8 @@
 		0160E3BE29C0FEEB009D434E /* Sorting_HatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_HatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		01BC136C29F1E4E600EF1EC3 /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		01BEC07229C2741A001273FC /* Point Calc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Point Calc.swift"; sourceTree = "<group>"; };
-		01E877342A0C23810055B167 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
+		0699B1EA2AC73F9B00E25C3C /* HousePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePoint.swift; sourceTree = "<group>"; };
+		0699B1EE2AC7435700E25C3C /* WinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +111,14 @@
 				0160E39B29C0FEE9009D434E /* AppDelegate.swift */,
 				0160E39D29C0FEE9009D434E /* SceneDelegate.swift */,
 				0160E39F29C0FEE9009D434E /* ViewController.swift */,
-				01E877342A0C23810055B167 /* SecondViewController.swift */,
+				0699B1EE2AC7435700E25C3C /* WinnerViewController.swift */,
 				0160E3A129C0FEE9009D434E /* Main.storyboard */,
 				0160E3A429C0FEEB009D434E /* Assets.xcassets */,
 				0160E3A629C0FEEB009D434E /* LaunchScreen.storyboard */,
 				0160E3A929C0FEEB009D434E /* Info.plist */,
 				01505A1229C108D1002B3981 /* Question.swift */,
+				0699B1EA2AC73F9B00E25C3C /* HousePoint.swift */,
 				01BEC07229C2741A001273FC /* Point Calc.swift */,
-				01BC136C29F1E4E600EF1EC3 /* View.h */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";
@@ -270,10 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E877352A0C23810055B167 /* SecondViewController.swift in Sources */,
 				0160E3A029C0FEE9009D434E /* ViewController.swift in Sources */,
 				01505A1329C108D1002B3981 /* Question.swift in Sources */,
 				0160E39C29C0FEE9009D434E /* AppDelegate.swift in Sources */,
+				0699B1EB2AC73F9B00E25C3C /* HousePoint.swift in Sources */,
+				0699B1EF2AC7435700E25C3C /* WinnerViewController.swift in Sources */,
 				0160E39E29C0FEE9009D434E /* SceneDelegate.swift in Sources */,
 				01BEC07329C2741A001273FC /* Point Calc.swift in Sources */,
 			);

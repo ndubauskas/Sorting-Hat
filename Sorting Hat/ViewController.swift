@@ -8,16 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let secondVC = SecondViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         initiliazeVariables()
-       // let vc = storyboard?.instantiateViewController(withIdentifier: "second_VC") as! SecondViewController
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        resetEverything()
+    }
     func initiliazeVariables()
     {
         displayQuestion.text = questionBank[0]
@@ -31,13 +32,8 @@ class ViewController: UIViewController {
         questionNumberOutlet.text = "1"
         answerNum4C = 0
         lastQuestion = false
-        /*
-        griffProgressBar.isHidden = true
-        huffProgressBar.isHidden = true
-        ravnProgressBar.isHidden = true
-        slythProgressBar.isHidden = true
-         */
-       
+
+        
     }
     // Array order is: Griff, Ravn, Huff, Slyth
     
@@ -193,38 +189,55 @@ class ViewController: UIViewController {
         if(lastQuestion == true)
         {
             
-            //let totalPointAmount = userPoints[0]+userPoints[1]+userPoints[2]+userPoints[3]
-                // print(totalPointAmount)
-           // var doubleConvertion: [Double] = [0.0,0.0,0.0,0.0]
             
-            /*
-            for index in 0..<4{
-                doubleConvertion[index] = Double(userPoints[index])/Double(totalPointAmount)
-                resultString[index] = String(doubleConvertion[index])
-            }
-            
-            choice1Outlet.setTitle(resultString[0], for: .normal)
-            choice2Outlet.setTitle(resultString[1], for: .normal)
-            choice3Outlet.setTitle(resultString[2], for: .normal)
-            choice4Outlet.setTitle(resultString[3], for: .normal)
-             */
-            displayQuestion.text = "Share with people"
-            goToSecondVC()
-           //secondVC.checkResults()
-           // secondVC.showResults()
+            performSegue(withIdentifier: "goToWinner", sender: self)
             
         }
-     
+        
     }
-    func goToSecondVC()
-    {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "second_VC") as! SecondViewController
-        present(vc,animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let griffHouse = housePoint(houseName: "gImage", totalPoints: userPoints[0], houseColor: "Red")
+        let ravHouse = housePoint(houseName: "rImage", totalPoints: userPoints[1], houseColor: "Blue")
+        let huffHouse = housePoint(houseName: "hImage", totalPoints: userPoints[2], houseColor: "Yellow")
+        let slythHouse = housePoint(houseName: "sImage", totalPoints: userPoints[3], houseColor: "Green")
+        
+        let objects = [griffHouse,ravHouse,huffHouse,slythHouse]
+       //print(objects[0])
+        let sorting = objects.sorted{$0.totalPoints > $1.totalPoints}
+        
+//        print("First place = ",sorting[0].totalPoints)
+//        print("House name = ",sorting[0].houseName)
+//
+        if segue.identifier == "goToWinner" {
+            if let destinationVC = segue.destination as? WinnerViewController {
+           
+                let imageName = sorting[0].houseName
+                if let image = UIImage(named: imageName){
+                    destinationVC.winnerImage = image
+                    destinationVC.winnerColorString = sorting[0].houseColor
+//                    if let houseColor = sorting[0].houseColor {
+//                        destinationVC.winnerColorString = houseColor
+//                              } else {
+//                                  print("Invalid color name: \(sorting[0].houseColor)")
+//                              }
+
+                    
+                }else {
+                    print(":(")
+                }
+                
+            }
+        }
+        
     }
-   
+
+    
+    
+    
+}
     
 
-}
 
 
 

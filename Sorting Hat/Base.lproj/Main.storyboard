@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdY-7U-ryS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdY-7U-ryS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,70 +88,12 @@
                         <outlet property="choice4Outlet" destination="0s4-Sn-HhZ" id="ciO-oc-v9u"/>
                         <outlet property="displayQuestion" destination="ndP-p8-kzk" id="aL4-ub-keL"/>
                         <outlet property="questionNumberOutlet" destination="fNv-mg-aps" id="qpR-zd-xeP"/>
-                        <segue destination="DLw-qe-BI2" kind="show" id="LV6-yQ-6OL"/>
+                        <segue destination="uag-0S-GGM" kind="show" identifier="goToWinner" id="XU7-sl-ODX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
-        </scene>
-        <!--Second View Controller-->
-        <scene sceneID="IaH-WD-0xa">
-            <objects>
-                <viewController storyboardIdentifier="second_VC" id="DLw-qe-BI2" customClass="SecondViewController" customModule="Sorting_Hat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZTL-dv-ldP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leZ-dm-Sfe">
-                                <rect key="frame" x="283" y="59" width="62" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
-                                <connections>
-                                    <action selector="unwindButton:" destination="DLw-qe-BI2" eventType="touchUpInside" id="cEw-Vu-1L3"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gImage" translatesAutoresizingMaskIntoConstraints="NO" id="uYE-yb-FiU">
-                                <rect key="frame" x="77" y="276" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt9-J2-BVs">
-                                <rect key="frame" x="141" y="172" width="112" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Results"/>
-                                <connections>
-                                    <action selector="getResultsBTN:" destination="DLw-qe-BI2" eventType="touchUpInside" id="IvT-5Z-5Zk"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xT6-ey-MOW">
-                                <rect key="frame" x="16" y="412" width="175" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeX-If-bbW">
-                                <rect key="frame" x="189" y="493" width="188" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMu-Kz-4It">
-                                <rect key="frame" x="16" y="653" width="156" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="yvm-lH-3a8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1Vf-1W-kAg"/>
-                    <connections>
-                        <outlet property="firstPlaceImage" destination="uYE-yb-FiU" id="1Zr-Dm-MYc"/>
-                        <outlet property="fourthPlaceImage" destination="IMu-Kz-4It" id="zpu-fJ-NAZ"/>
-                        <outlet property="secondPlaceImage" destination="xT6-ey-MOW" id="edy-x2-gDh"/>
-                        <outlet property="thirdPlaceImage" destination="zeX-If-bbW" id="MCb-91-LAh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="muT-H8-RvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1762.5954198473282" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6yc-tm-4Ya">
@@ -170,9 +113,33 @@
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
+        <!--Winner View Controller-->
+        <scene sceneID="wQ3-1w-1rC">
+            <objects>
+                <viewController id="uag-0S-GGM" customClass="WinnerViewController" customModule="Sorting_Hat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iDS-rk-7xr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kh6-Pz-JK9">
+                                <rect key="frame" x="76" y="314" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vG1-fZ-P7m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vby-kj-EEa"/>
+                    <connections>
+                        <outlet property="winner" destination="Kh6-Pz-JK9" id="03K-JA-Ptk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmr-W1-Ved" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="4"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="gImage" width="68.333335876464844" height="81.666664123535156"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

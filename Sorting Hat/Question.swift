@@ -18,7 +18,7 @@ var userAnswer = ""
 //Two choice answers
 let questionBank = ["Dawn or Dusk?","Forest or River?", "Moon or Stars?","Black or White?", "Heads or Tails?", "Left or Right?",
     "Four boxes are placed before you. Which would you try and open?",
-    "You and two friends need to cross a bridge guarded by a river troll who insists on fighting one of you before he will let all of you pass. Do you:",
+    "You and two friends need to cross a bridge guarded by a river troll who insists on fighting one of you before he will let all of you pass.     Do you:",
     " Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it lured you, it would smell of:"
     ,"One of your house mates has cheated in a Hogwarts exam by using a Self-Spelling Quill. Professor Flitwick is suspicious of what happened. He draws you to one side after his lesson and asks you whether or not your classmate used a forbidden quill. What do you do?"
     ,"Which of the following do you find most difficult to deal with?"
@@ -28,12 +28,12 @@ let questionBank = ["Dawn or Dusk?","Forest or River?", "Moon or Stars?","Black 
     ,"Which of the following would you most hate people to call you?"
     ,"After you have died, what would you most like people to do when they hear your name?"
     ,"How would you like to be known to history?"
-    ,"A Muggle confronts you and says that they are sure you are a witch or wizard. Do you:"
+    ,"A Muggle confronts you and says that they    are sure you are a witch or wizard. Do you:"
     ,"Which nightmare would frighten you most?"
     ,"Given the choice, would you rather invent a potion that would guarantee you:"
     ,"If you could have any power, which would you choose?"
     ,"Which road tempts you most?"
-    ,"Late at night, walking alone down the street, you hear a peculiar cry that you believe to have a magical source. Do you:"
+    ,"Late at night, walking alone down the street, you hear a peculiar cry that you believe to     have a magical source. Do you:"
     ,"What are you most looking forward to learning at Hogwarts?"
     ,"Which would you rather be:"]
 
@@ -116,21 +116,6 @@ let answer4C = ["The small tortoiseshell box, embellished with gold.","The gleam
                 
     "Imitated?","Liked?","Feared?","Trusted?"]
 
-/*let lastQuestionAnswers = ["Tabby cat",
-                           "Siamese cat",
-                           "Ginger cat",
-                           "Black cat",
-                           "White cat",
-                           "Tawny owl",
-                           "Screech owl",
-                           "Brown owl",
-                           "Snowy owl",
-                           "Barn owl",
-                           "Common toad",
-                           "Natterjack toad",
-                           "Dragon toad",
-                           "Harlequin toad",
-                           "Three toed tree toad"]
-*/
+
 
 

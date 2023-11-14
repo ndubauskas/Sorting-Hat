@@ -27,19 +27,19 @@ Welcome to the Sorting Hat Quiz! Find out which Hogwarts House you belong to by 
 
 
 
-Contributing
+## Contributing
 Contributions are welcome! If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Acknowledgments
+## Acknowledgments
 Slytherin Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
 Ravenclaw Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
 Gryffindor Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
 Hufflepuff Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
 
-Contact
+# Contact
 For any questions or feedback, please contact ndubauskas95@yahoo.com.
 
 

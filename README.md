@@ -34,10 +34,10 @@ Contributions are welcome! If you have any ideas, improvements, or bug fixes, fe
 This project is licensed under the MIT License.
 
 ## Acknowledgments
-Slytherin Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
-Ravenclaw Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
-Gryffindor Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
-Hufflepuff Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
+- Slytherin Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
+- Ravenclaw Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
+- Gryffindor Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
+- Hufflepuff Crest by Whitney Rosenberg from Noun Project (CC BY 3.0)
 
 # Contact
 For any questions or feedback, please contact ndubauskas95@yahoo.com.

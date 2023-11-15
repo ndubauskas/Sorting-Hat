@@ -15,7 +15,7 @@ Welcome to the Sorting Hat Quiz! Find out which Hogwarts House you belong to by 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/Sorting-Hat-Quiz.git
+   git clone https://github.com/ndubauskas/Sorting-Hat-Quiz.git
 <Table>
 <tr>
   <td align="center"><img src="https://github.com/ndubauskas/Sorting-Hat/blob/main/Images/Gryffindor.png" width="100%"></td>

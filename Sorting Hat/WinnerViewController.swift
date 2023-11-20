@@ -32,7 +32,7 @@ class WinnerViewController: UIViewController {
           
             navBar?.tintColor = colorDictionary[winnerColorString]
             let gradient: CAGradientLayer = CAGradientLayer()
-            gradient.colors = [UIColor.white.cgColor, winnerColor.cgColor, UIColor.black.cgColor]
+            gradient.colors = [UIColor.black.cgColor, winnerColor.cgColor, UIColor.white.cgColor]
             gradient.locations = [0.0, 0.4, 1.0]
             gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
             gradient.endPoint = CGPoint(x: 0.5, y: 1.0)

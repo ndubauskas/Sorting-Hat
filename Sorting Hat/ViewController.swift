@@ -20,30 +20,30 @@ class ViewController: UIViewController {
         self.view.sendSubviewToBack(view)
         
         super.viewDidLoad()
-        displayQuestion.translatesAutoresizingMaskIntoConstraints = false
-        choice1Outlet.translatesAutoresizingMaskIntoConstraints = false
-        choice2Outlet.translatesAutoresizingMaskIntoConstraints = false
-        choice3Outlet.translatesAutoresizingMaskIntoConstraints = false
-        choice4Outlet.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            displayQuestion.widthAnchor.constraint(equalToConstant: 340),
-            displayQuestion.heightAnchor.constraint(equalToConstant: 150),
-            choice1Outlet.widthAnchor.constraint(equalToConstant: 245),
-            choice1Outlet.heightAnchor.constraint(equalToConstant: 130),
-            choice2Outlet.widthAnchor.constraint(equalToConstant: 245),
-            choice2Outlet.heightAnchor.constraint(equalToConstant: 130),
-            choice3Outlet.widthAnchor.constraint(equalToConstant: 245),
-            choice3Outlet.heightAnchor.constraint(equalToConstant: 130),
-            choice4Outlet.widthAnchor.constraint(equalToConstant: 245),
-            choice4Outlet.heightAnchor.constraint(equalToConstant: 130)
-        ])
-        
-        displayQuestion.clipsToBounds = true
-        choice1Outlet.clipsToBounds = true
-        choice2Outlet.clipsToBounds = true
-        choice3Outlet.clipsToBounds = true
-        choice4Outlet.clipsToBounds = true
+//        displayQuestion.translatesAutoresizingMaskIntoConstraints = false
+//        choice1Outlet.translatesAutoresizingMaskIntoConstraints = false
+//        choice2Outlet.translatesAutoresizingMaskIntoConstraints = false
+//        choice3Outlet.translatesAutoresizingMaskIntoConstraints = false
+//        choice4Outlet.translatesAutoresizingMaskIntoConstraints = false
+
+//        NSLayoutConstraint.activate([
+//            displayQuestion.widthAnchor.constraint(equalToConstant: 340),
+//            displayQuestion.heightAnchor.constraint(equalToConstant: 150),
+//            choice1Outlet.widthAnchor.constraint(equalToConstant: 245),
+//            choice1Outlet.heightAnchor.constraint(equalToConstant: 130),
+//            choice2Outlet.widthAnchor.constraint(equalToConstant: 245),
+//            choice2Outlet.heightAnchor.constraint(equalToConstant: 130),
+//            choice3Outlet.widthAnchor.constraint(equalToConstant: 245),
+//            choice3Outlet.heightAnchor.constraint(equalToConstant: 130),
+//            choice4Outlet.widthAnchor.constraint(equalToConstant: 245),
+//            choice4Outlet.heightAnchor.constraint(equalToConstant: 130)
+//        ])
+
+//        displayQuestion.clipsToBounds = true
+//        choice1Outlet.clipsToBounds = true
+//        choice2Outlet.clipsToBounds = true
+//        choice3Outlet.clipsToBounds = true
+//        choice4Outlet.clipsToBounds = true
         displayQuestion.layer.borderWidth = 3.2
         displayQuestion.layer.borderColor = UIColor.systemTeal.cgColor
        
@@ -57,6 +57,8 @@ class ViewController: UIViewController {
         choice4Outlet.layer.borderWidth = 3.2
         choice4Outlet.layer.borderColor = UIColor.systemTeal.cgColor
         initiliazeVariables()
+        
+        //choice1Outlet.titleLabel?.font = UIFont(name: "Avenir", size: 20)
         
     }
     
